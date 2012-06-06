@@ -1,0 +1,23 @@
+<%content_for(:js) do%>
+	<%=javascript_include_tag "pages/index.js"%>
+<%end%>
+
+<div align="center">
+	<%= form_tag("/search", :method => "get", :class=>"form-inline", :remote=>true,:id=>"searchForm") do %>
+	  <%= label_tag(:q, "Search for:") %>
+	  <%= search_field_tag(:q) %>
+	  <%= submit_tag("Search", :class=>"btn") %>
+	<% end %>
+</div>
+<div id="resultArea" class="row-fluid">
+	<div class="span12">
+		<fieldset class="well" >
+			<div id="imagesArea">
+				
+			</div>
+			<div align="center" style="display:none;" id="loadingArea">
+				<%=image_tag "loading.gif",:width=>50%>
+			</div>
+		</fieldset>
+	</div>	
+</div>
