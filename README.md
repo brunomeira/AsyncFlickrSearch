@@ -10,10 +10,10 @@ In this project I'm using:
 - JQUery
 
 Some Images:
-![Initial Screen](brunomeira/AsyncFlickrSearch/blob/master/img/img1.jpg)
-![First Retrieve](brunomeira/AsyncFlickrSearch/blob/master/img/img2.jpg)
-![Scrolling down retrieves more images](brunomeira/AsyncFlickrSearch/blob/master/img/img3.jpg)
-![New images retrieved](brunomeira/AsyncFlickrSearch/blob/master/img/img4.jpg)
+![Initial Screen](/brunomeira/AsyncFlickrSearch/blob/master/img/img1.jpg)
+![First Retrieve](/brunomeira/AsyncFlickrSearch/blob/master/img/img2.jpg)
+![Scrolling down retrieves more images](/brunomeira/AsyncFlickrSearch/blob/master/img/img3.jpg)
+![New images retrieved](/brunomeira/AsyncFlickrSearch/blob/master/img/img4.jpg)
 
 Take a look at my website. Im developing it, but most of features are already working.
 the site is: www.developingsoftwares.com
