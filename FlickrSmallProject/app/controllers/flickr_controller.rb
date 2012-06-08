@@ -6,12 +6,12 @@ class FlickrController < ApplicationController
     FlickRaw.shared_secret="bfac42d276231fd9"
     
     if params[:q].nil? || params[:q] ==""
-      @list = flickr.photos.getRecent(:per_page=>10,:page=>params[:page])
+      @list = flickr.photos.getRecent(:per_page=>50,:page=>params[:page])
     else
       if params[:page].nil?
-        @list = flickr.photos.search(:text=>params[:q],:per_page=>10,:page=>1)
+        @list = flickr.photos.search(:text=>params[:q],:per_page=>50,:page=>1)
       else
-        @list = flickr.photos.search(:text=>params[:q],:per_page=>10,:page=>params[:page])
+        @list = flickr.photos.search(:text=>params[:q],:per_page=>50,:page=>params[:page])
       end
     end
     @elements = Array.new
@@ -25,16 +25,5 @@ class FlickrController < ApplicationController
     respond_to do |format|
       format.json { render :json => @elements.to_json}
     end
-
-  # id = list[0].id
-  # secret = list[0].secret
-  # info = flickr.photos.getInfo :photo_id => id, :secret => secret
-  # puts info.title
-  # puts info.dates.taken
-
-  # sizes = flickr.photos.getSizes :photo_id => id
-  # original = sizes.find {|s| s.label == 'Original' }
-  # puts original.width
-
   end
 end

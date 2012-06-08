@@ -6,16 +6,22 @@ $(document).ready(function() {
 	startScroll();
 });
 function bindFormEvent() {
+	var showLoad;
 	$("#searchForm").bind("ajax:beforeSend", function(jqXHR, settings) {
 		$("#imagesArea").fadeOut("slow");
 		$("#loadingArea").fadeIn("slow");
 		$("#imagesArea").empty();
+		showLoad = true;
 	}).bind("ajax:success", function(evt, results, status) {
 		$(results).each(function(index, element) {
 			$("#imagesArea").append(mountImageDiv(element.title, element.url));
+			if(showLoad) {
+				showLoad = false;
+				$("#loadingArea").fadeOut("slow");
+				$("#imagesArea").fadeIn("slow");
+			}
 		});
-		$("#imagesArea").fadeIn("slow");
-		$("#loadingArea").fadeOut("slow");
+
 		$("body").attr("page", 2);
 	});
 }
@@ -50,7 +56,7 @@ function startScroll() {
 
 function mountImageDiv(title, url) {
 	html = "<div style=\"display: inline; margin:20px;\">"
-	html += "<img src=\"" + url + "\"\>"
+	html += "<img src=\"" + url + "\"  style=\"padding:5px;border:1px solid #021a40;\"\>"
 	html += "</div>"
 	return html;
 }
