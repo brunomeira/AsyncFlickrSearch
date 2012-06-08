@@ -6,12 +6,12 @@ class FlickrController < ApplicationController
     FlickRaw.shared_secret="bfac42d276231fd9"
     
     if params[:q].nil? || params[:q] ==""
-      @list = flickr.photos.getRecent(:per_page=>50,:page=>params[:page])
+      @list = flickr.photos.getRecent(:per_page=>10,:page=>params[:page])
     else
       if params[:page].nil?
-        @list = flickr.photos.search(:text=>params[:q],:per_page=>50,:page=>1)
+        @list = flickr.photos.search(:text=>params[:q],:per_page=>10,:page=>1)
       else
-        @list = flickr.photos.search(:text=>params[:q],:per_page=>50,:page=>params[:page])
+        @list = flickr.photos.search(:text=>params[:q],:per_page=>10,:page=>params[:page])
       end
     end
     @elements = Array.new
