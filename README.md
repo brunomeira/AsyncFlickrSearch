@@ -9,10 +9,10 @@ In this project I'm using:
 - Flickraw
 - JQUery
 
-![Initial Screen](/brunomeira.github.com/AsyncFlickrSearch/img/img1.jpg)
-![First Retrieve](brunomeira.github.com/AsyncFlickrSearch/img/img2.jpg)
-![Scrolling down retrieves more images](/brunomeira.github.com/AsyncFlickrSearch/img/img3.jpg)
-![New images retrieved](/brunomeira.github.com/AsyncFlickrSearch/img/img4.jpg)
+![Initial Screen](https://github.com/brunomeira/AsyncFlickrSearch/raw/master/img/img1.jpg)
+![First Retrieve](https://github.com/brunomeira/AsyncFlickrSearch/raw/master/img/img2.jpg)
+![Scrolling down retrieves more images](https://github.com/brunomeira/AsyncFlickrSearch/raw/master/img/img3.jpg)
+![New images retrieved](https://github.com/brunomeira/AsyncFlickrSearch/raw/master/img/img4.jpg)
 
 Take a look at my website. Im developing it, but most of features are already working.
 the site is: www.developingsoftwares.com

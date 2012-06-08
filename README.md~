@@ -8,8 +8,7 @@ In this project I'm using:
 - Rails 3.2
 - Flickraw
 - JQUery
-
-Some Images:image.jpg
+https://github.com/brunomeira/AsyncFlickrSearch/raw/master/doc/zipkin-logo-200x119.jpg
 ![Initial Screen](/brunomeira.github.com/AsyncFlickrSearch/img/img1.jpg)
 ![First Retrieve](brunomeira.github.com/AsyncFlickrSearch/img/img2.jpg)
 ![Scrolling down retrieves more images](/brunomeira.github.com/AsyncFlickrSearch/img/img3.jpg)
