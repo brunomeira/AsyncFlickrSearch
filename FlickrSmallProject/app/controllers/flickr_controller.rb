@@ -13,7 +13,7 @@ class FlickrController < ApplicationController
     else
       if params[:page].nil?
         @list = flickr.photos.search(:text=>params[:q],:per_page=>2,:page=>1)
-      else
+      else  
         @list = flickr.photos.search(:text=>params[:q],:per_page=>2,:page=>params[:page])
       end
     end
@@ -23,6 +23,7 @@ class FlickrController < ApplicationController
       flick = Flickr.new
       flick.title = info.title
       flick.url =  FlickRaw.url_m(info)
+      flick.tags = info.tags.map {|t| t.raw}
       @elements << flick
     end
     respond_to do |format|
