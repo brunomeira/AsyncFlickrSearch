@@ -3,7 +3,7 @@
 <%end%>
 
 <div align="center">
-	<%= form_tag("/search", :method => "get", :class=>"form-inline", :remote=>true,:id=>"searchForm") do %>
+	<%= form_tag("/search", :method => "get", :class=>"form-inline", :id=>"searchForm") do %>
 	  <%= label_tag(:q, "Search for:") %>
 	  <%= search_field_tag(:q) %>
 	  <%= submit_tag("Search", :class=>"btn") %>
