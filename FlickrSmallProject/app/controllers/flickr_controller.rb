@@ -24,7 +24,7 @@ class FlickrController < ApplicationController
       flick.title = info.title
       flick.url =  FlickRaw.url_m(info)
       flick.tags = info.tags.map {|t| t.raw}
-      @elements << flick
+      @elements << flick 
     end
     respond_to do |format|
       format.json { render :json => @elements.to_json, :content_type => "application/json"}
